@@ -38,6 +38,7 @@ type
 
   TZReportOptions = class(TPersistent)
   private
+    FCodePage: Integer;
     fDestination : TZRDestination;
     fEscapes     : TZREscapes;
     fFileName    : String;
@@ -66,6 +67,7 @@ type
     property Font        : TZRPrinterFont read fFont write SetFont;
     property IgnoreStyles: Boolean read fIgnoreStyles write fIgnoreStyles default False;
     property OEMConvert  : Boolean read fOEMConvert write fOEMConvert default True;
+    property CodePage    : Integer read FCodePage write FCodePage default CP_OEMCP;
     property PageFrom    : Integer read fPageFrom write fPageFrom default 0;
     property PageTo      : Integer read fPageTo   write fPageTo   default 0;
     property PaperType   : TZRPaperType read fPaperType write fPaperType default zptFolio;
@@ -278,6 +280,7 @@ begin
   fFont       := TZRPrinterFont.Create;
   fEscapes    := TZREscapes.Create;
   fOEMConvert := True;
+  FCodePage   := CP_OEMCP;
   fPaperType  := zptFolio;
   fPreviewMode:= zpmSinglePage;
   fScissors   := True;
@@ -312,6 +315,7 @@ begin
     FileName    := TZReportOptions(Source).FileName;
     IgnoreStyles:= TZReportOptions(Source).IgnoreStyles;
     OEMConvert  := TZReportOptions(Source).OEMConvert;
+    CodePage    := TZReportOptions(Source).CodePage;
     PageFrom    := TZReportOptions(Source).PageFrom;
     PageTo      := TZReportOptions(Source).PageTo;
     PaperType   := TZReportOptions(Source).PaperType;
@@ -745,6 +749,7 @@ begin
   try
     EscapeStream := TZREscapeStream.Create(Stream, Options.Escapes.Values);
     EscapeStream.OEMConvert:= Options.OEMConvert;
+    EscapeStream.CodePage := Options.CodePage;
     for i := 1 to Options.Copies do
       try
         StreamStartReport;
