@@ -1,0 +1,767 @@
+object fmMain: TfmMain
+  Left = 191
+  Height = 179
+  Top = 107
+  Width = 419
+  Caption = 'ZReport demo'
+  ClientHeight = 179
+  ClientWidth = 419
+  LCLVersion = '1.9.0.0'
+  object btPreview: TButton
+    Left = 288
+    Height = 25
+    Top = 96
+    Width = 75
+    Caption = 'Preview'
+    OnClick = btPreviewClick
+    TabOrder = 0
+  end
+  object btQuit: TBitBtn
+    Left = 288
+    Height = 25
+    Top = 128
+    Width = 75
+    Kind = bkClose
+    TabOrder = 1
+  end
+  object rgPreviewMode: TRadioGroup
+    Left = 8
+    Height = 49
+    Top = 8
+    Width = 201
+    AutoFill = True
+    Caption = 'Preview Mode'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 29
+    ClientWidth = 197
+    Columns = 2
+    ItemIndex = 0
+    Items.Strings = (
+      'Single page'
+      'Whole report'
+    )
+    TabOrder = 2
+  end
+  object rgPaperType: TRadioGroup
+    Left = 224
+    Height = 49
+    Top = 8
+    Width = 185
+    AutoFill = True
+    Caption = 'Paper Type'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 29
+    ClientWidth = 181
+    Columns = 2
+    ItemIndex = 0
+    Items.Strings = (
+      'Folio'
+      'Sheets'
+    )
+    TabOrder = 3
+  end
+  object rgReport: TRadioGroup
+    Left = 8
+    Height = 105
+    Top = 64
+    Width = 201
+    AutoFill = True
+    Caption = 'Report'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 85
+    ClientWidth = 197
+    ItemIndex = 0
+    Items.Strings = (
+      'Simple list'
+      'Grouping'
+      'Master-detail'
+      'Composite (all together)'
+    )
+    TabOrder = 5
+  end
+  object zrList: TZReport
+    Left = 224
+    Height = 23
+    Top = 64
+    Width = 41
+    DataOptions.AutoOpen = True
+    DataSet = taCustomers
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Courier New'
+    Options.PaperType = zptSheet
+    Title = 'Simple list'
+    OnDataStart = zrDataStart
+    Minimized = True
+    object zrvCustNo: TZRField
+      DataField = 'CustNo'
+      DataSet = taCustomers
+    end
+    object zrvCompany: TZRField
+      Format.Width = 30
+      DataField = 'Company'
+      DataSet = taCustomers
+    end
+    object zrvTotal: TZRAggregator
+      Variable = zrvCustNo
+    end
+    object zrListPageHeader: TZRBand
+      Left = 2
+      Height = 1
+      Top = 11
+      Width = 38
+      Stretch = False
+      BandType = zbtPageHeader
+      object ZRSystemLabel1: TZRSystemLabel
+        Left = 26
+        Height = 1
+        Top = 0
+        Width = 12
+        Align = zalRight
+        AutoSize = zasWidth
+        DataKind = zsdPageNumber
+        Text = 'Page#:'
+      end
+    end
+    object zrListHeader: TZRBand
+      Left = 2
+      Height = 2
+      Top = 12
+      Width = 38
+      Frame.Left = 1
+      Frame.Top = 1
+      Frame.Right = 1
+      Stretch = False
+      BandType = zbtHeader
+      object ZRLabel3: TZRLabel
+        Left = 1
+        Height = 1
+        Top = 1
+        Width = 36
+        Align = zalTop
+        Alignment.X = zawCenter
+        Caption = 'Customer listing'
+      end
+    end
+    object zrListColumnHeader: TZRBand
+      Left = 2
+      Height = 3
+      Top = 14
+      Width = 38
+      Frame.Left = 1
+      Frame.Top = 1
+      Frame.Right = 1
+      Frame.Bottom = 1
+      Stretch = False
+      BandType = zbtColumnHeader
+      object ZRLabel4: TZRLabel
+        Left = 2
+        Height = 1
+        Top = 1
+        Width = 8
+        FontStyles = [zfsBold]
+        Caption = 'CustNo'
+      end
+      object ZRLabel5: TZRLabel
+        Left = 12
+        Height = 1
+        Top = 1
+        Width = 24
+        Caption = 'Company'
+      end
+    end
+    object zrListDetail: TZRBand
+      Left = 2
+      Height = 1
+      Top = 17
+      Width = 38
+      Frame.Left = 1
+      Frame.Right = 1
+      Stretch = True
+      BandType = zbtDetail
+      object ZRLabel1: TZRLabel
+        Left = 2
+        Height = 1
+        Top = 0
+        Width = 8
+        Caption = 'ZRLabel1'
+        Variable = zrvCustNo
+      end
+      object ZRLabel2: TZRLabel
+        Left = 12
+        Height = 1
+        Top = 0
+        Width = 24
+        AutoSize = zasHeight
+        Caption = 'ZRLabel2'
+        Variable = zrvCompany
+      end
+    end
+    object zrListColumnFooter: TZRBand
+      Left = 2
+      Height = 1
+      Top = 18
+      Width = 38
+      Frame.Top = 1
+      Stretch = False
+      BandType = zbtColumnFooter
+    end
+    object zrListFooter: TZRBand
+      Left = 2
+      Height = 2
+      Top = 19
+      Width = 38
+      Frame.Left = 1
+      Frame.Right = 1
+      Frame.Bottom = 1
+      Stretch = False
+      BandType = zbtFooter
+      object ZRLabel6: TZRLabel
+        Left = 2
+        Height = 1
+        Top = 0
+        Width = 15
+        AutoSize = zasWidth
+        Caption = 'Total customers'
+      end
+      object ZRTotalLabel1: TZRTotalLabel
+        Left = 25
+        Height = 1
+        Top = 0
+        Width = 11
+        FontStyles = [zfsBold, zfsItalic]
+        Alignment.X = zawRight
+        Kind = ztkCount
+        Level = zrList
+        Variable = zrvTotal
+      end
+    end
+  end
+  object zrGroups: TZReport
+    Left = 224
+    Height = 27
+    Top = 104
+    Width = 41
+    DataSet = taOrders
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Courier New'
+    Title = 'Grouping'
+    OnDataStart = zrDataStart
+    Minimized = True
+    object zrvOrderNo: TZRField
+      Format.Width = 10
+      DataField = 'OrderNo'
+      DataSet = taOrders
+    end
+    object zrvCustNo0: TZRField
+      Format.Width = 10
+      DataField = 'CustNo'
+      DataSet = taOrders
+    end
+    object zrvAmountPaid: TZRField
+      Format.FloatFormat = ffCurrency
+      Format.Width = 10
+      DataField = 'AmountPaid'
+      DataSet = taOrders
+    end
+    object zrvTotal0: TZRAggregator
+      Format.FloatFormat = ffCurrency
+      Format.Width = 10
+      Variable = zrvAmountPaid
+    end
+    object zrGroupsGroup: TZRGroup
+      Variable = zrvCustNo0
+    end
+    object zrGroupsHeader: TZRBand
+      Left = 2
+      Height = 4
+      Top = 11
+      Width = 38
+      Frame.Left = 1
+      Frame.Top = 1
+      Frame.Right = 1
+      Stretch = False
+      BandType = zbtHeader
+      object ZRLabel7: TZRLabel
+        Left = 1
+        Height = 1
+        Top = 2
+        Width = 36
+        Align = zalWidth
+        Alignment.X = zawCenter
+        Caption = 'Customer orders (groups demo)'
+      end
+    end
+    object zrGroupsColumnHeader: TZRBand
+      Left = 2
+      Height = 3
+      Top = 15
+      Width = 38
+      Frame.Left = 1
+      Frame.Top = 1
+      Frame.Right = 1
+      Frame.Bottom = 1
+      Stretch = False
+      BandType = zbtColumnHeader
+      object ZRLabel8: TZRLabel
+        Left = 12
+        Height = 1
+        Top = 1
+        Width = 8
+        Alignment.X = zawCenter
+        Caption = 'Order #'
+      end
+      object ZRLabel9: TZRLabel
+        Left = 2
+        Height = 1
+        Top = 1
+        Width = 8
+        Alignment.X = zawCenter
+        Caption = 'Cust #'
+      end
+      object ZRLabel10: TZRLabel
+        Left = 22
+        Height = 1
+        Top = 1
+        Width = 14
+        Alignment.X = zawCenter
+        Caption = 'Amount'
+      end
+    end
+    object zrGroupsGroupHeader: TZRBand
+      Left = 2
+      Height = 3
+      Top = 18
+      Width = 38
+      Frame.Left = 1
+      Frame.Right = 1
+      Stretch = False
+      BandType = zbtGroupHeader
+      GroupOrder = 0
+      object ZRLabel11: TZRLabel
+        Left = 7
+        Height = 1
+        Top = 1
+        Width = 9
+        AutoSize = zasWidth
+        Caption = 'Customer:'
+      end
+      object ZRLabel12: TZRLabel
+        Left = 18
+        Height = 1
+        Top = 1
+        Width = 8
+        Caption = 'ZRLabel12'
+        Variable = zrvCustNo0
+      end
+    end
+    object zrGroupsDetail: TZRBand
+      Left = 2
+      Height = 1
+      Top = 21
+      Width = 38
+      Frame.Left = 1
+      Frame.Right = 1
+      Stretch = False
+      BandType = zbtDetail
+      object ZRLabel13: TZRLabel
+        Left = 2
+        Height = 1
+        Top = 0
+        Width = 8
+        Caption = 'ZRLabel13'
+        Variable = zrvCustNo0
+      end
+      object ZRLabel14: TZRLabel
+        Left = 12
+        Height = 1
+        Top = 0
+        Width = 8
+        Caption = 'ZRLabel14'
+        Variable = zrvOrderNo
+      end
+      object ZRLabel15: TZRLabel
+        Left = 22
+        Height = 1
+        Top = 0
+        Width = 14
+        Alignment.X = zawRight
+        Caption = 'ZRLabel15'
+        Variable = zrvAmountPaid
+      end
+    end
+    object zrGroupsGroupFooter: TZRBand
+      Left = 2
+      Height = 1
+      Top = 22
+      Width = 38
+      Frame.Left = 1
+      Frame.Right = 1
+      Stretch = False
+      BandType = zbtGroupFooter
+      GroupOrder = 0
+      object ZRLabel16: TZRLabel
+        Left = 2
+        Height = 1
+        Top = 0
+        Width = 5
+        AutoSize = zasWidth
+        Caption = 'Total'
+      end
+      object ZRTotalLabel2: TZRTotalLabel
+        Left = 22
+        Height = 1
+        Top = 0
+        Width = 14
+        Alignment.X = zawRight
+        Kind = ztkSum
+        Level = zrGroupsGroup
+        Variable = zrvTotal0
+      end
+      object ZRTotalLabel4: TZRTotalLabel
+        Left = 12
+        Height = 1
+        Top = 0
+        Width = 8
+        Alignment.X = zawRight
+        Kind = ztkCount
+        Level = zrGroupsGroup
+        Variable = zrvTotal0
+      end
+    end
+    object zrGroupsColumnFooter: TZRBand
+      Left = 2
+      Height = 1
+      Top = 23
+      Width = 38
+      Frame.Top = 1
+      Stretch = False
+      BandType = zbtColumnFooter
+    end
+    object zrGroupsFooter: TZRBand
+      Left = 2
+      Height = 2
+      Top = 24
+      Width = 38
+      Frame.Left = 1
+      Frame.Right = 1
+      Frame.Bottom = 1
+      Stretch = False
+      BandType = zbtFooter
+      object ZRLabel17: TZRLabel
+        Left = 2
+        Height = 1
+        Top = 0
+        Width = 5
+        AutoSize = zasWidth
+        Caption = 'Total'
+      end
+      object ZRTotalLabel3: TZRTotalLabel
+        Left = 22
+        Height = 1
+        Top = 0
+        Width = 14
+        Alignment.X = zawRight
+        Kind = ztkSum
+        Level = zrGroups
+        Variable = zrvTotal0
+      end
+      object ZRTotalLabel5: TZRTotalLabel
+        Left = 12
+        Height = 1
+        Top = 0
+        Width = 8
+        Alignment.X = zawRight
+        Kind = ztkCount
+        Level = zrGroups
+        Variable = zrvTotal0
+      end
+    end
+  end
+  object zrMaster: TZReport
+    Left = 224
+    Height = 40
+    Top = 144
+    Width = 41
+    DataSet = taCustomers
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Courier New'
+    Title = 'Master-detail'
+    OnDataStart = zrDataStart
+    BeforePrint = zrMasterBeforePrint
+    Minimized = True
+    object zrvCustNo1: TZRField
+      Format.Width = 10
+      DataField = 'CustNo'
+      DataSet = taCustomers
+    end
+    object zrvCompany0: TZRField
+      Format.Width = 30
+      DataField = 'Company'
+      DataSet = taCustomers
+    end
+    object zrvTotal1: TZRAggregator
+      Format.Width = 10
+      Variable = zrvCustNo1
+    end
+    object zrMasterHeader: TZRBand
+      Left = 2
+      Height = 3
+      Top = 11
+      Width = 38
+      Stretch = False
+      BandType = zbtHeader
+      object ZRLabel18: TZRLabel
+        Left = 0
+        Height = 1
+        Top = 1
+        Width = 38
+        Align = zalWidth
+        Caption = 'Customer orders (Master-detail)'
+      end
+    end
+    object zrMasterColumnHeader: TZRBand
+      Left = 2
+      Height = 2
+      Top = 14
+      Width = 38
+      Frame.Left = 1
+      Frame.Top = 1
+      Frame.Right = 1
+      Stretch = False
+      BandType = zbtColumnHeader
+      object ZRLabel19: TZRLabel
+        Left = 2
+        Height = 1
+        Top = 1
+        Width = 8
+        Caption = 'Cust #'
+      end
+      object ZRLabel20: TZRLabel
+        Left = 12
+        Height = 1
+        Top = 1
+        Width = 24
+        Caption = 'Company'
+      end
+    end
+    object zrMasterDetailHeader: TZRBand
+      Left = 2
+      Height = 1
+      Top = 16
+      Width = 38
+      Frame.Top = 1
+      Stretch = False
+      BandType = zbtDetailHeader
+    end
+    object zrMasterDetail: TZRBand
+      Left = 2
+      Height = 3
+      Top = 17
+      Width = 38
+      Frame.Left = 1
+      Frame.Right = 1
+      Stretch = True
+      BandType = zbtDetail
+      object ZRLabel21: TZRLabel
+        Left = 2
+        Height = 1
+        Top = 1
+        Width = 8
+        Caption = 'ZRLabel21'
+        Variable = zrvCustNo1
+      end
+      object ZRLabel22: TZRLabel
+        Left = 12
+        Height = 1
+        Top = 1
+        Width = 24
+        AutoSize = zasHeight
+        Caption = 'ZRLabel22'
+        Variable = zrvCompany0
+      end
+    end
+    object zrMasterSubDetail: TZRSubDetail
+      Left = 2
+      Height = 1
+      Top = 21
+      Width = 38
+      DataSet = taOrders
+      Frame.Left = 1
+      Frame.Right = 1
+      Stretch = False
+      MasterIndex = 3
+      object zrvOrderNo0: TZRField
+        Format.Width = 10
+        DataField = 'OrderNo'
+        DataSet = taOrders
+      end
+      object zrvItemsTotal: TZRField
+        Format.FloatFormat = ffCurrency
+        Format.Width = 10
+        DataField = 'ItemsTotal'
+        DataSet = taOrders
+      end
+      object zrvTotal2: TZRAggregator
+        Format.FloatFormat = ffCurrency
+        Format.Width = 10
+        Variable = zrvItemsTotal
+      end
+      object ZRLabel26: TZRLabel
+        Left = 7
+        Height = 1
+        Top = 0
+        Width = 6
+        Caption = 'ZRLabel26'
+        Variable = zrvOrderNo0
+      end
+      object ZRLabel27: TZRLabel
+        Left = 23
+        Height = 1
+        Top = 0
+        Width = 13
+        Alignment.X = zawRight
+        Caption = 'ZRLabel27'
+        Variable = zrvItemsTotal
+        AfterPrint = ZRLabel27AfterPrint
+      end
+      object zrMasterSubDetailColumnHeader: TZRBand
+        Left = 2
+        Height = 1
+        Top = 20
+        Width = 38
+        Frame.Left = 1
+        Frame.Right = 1
+        Stretch = False
+        BandType = zbtColumnHeader
+        object ZRLabel24: TZRLabel
+          Left = 6
+          Height = 1
+          Top = 0
+          Width = 8
+          Caption = 'Order #'
+        end
+        object ZRLabel28: TZRLabel
+          Left = 23
+          Height = 1
+          Top = 0
+          Width = 13
+          Caption = 'Items total'
+        end
+      end
+      object zrMasterSubDetailFooter: TZRBand
+        Left = 2
+        Height = 1
+        Top = 22
+        Width = 38
+        Frame.Left = 1
+        Frame.Right = 1
+        Stretch = False
+        AfterPrint = zrMasterSubDetailFooterAfterPrint
+        BandType = zbtFooter
+        object ZRLabel25: TZRLabel
+          Left = 1
+          Height = 1
+          Top = 0
+          Width = 19
+          AutoSize = zasWidth
+          Caption = 'Total for customer:'
+        end
+        object ZRTotalLabel7: TZRTotalLabel
+          Left = 22
+          Height = 1
+          Top = 0
+          Width = 14
+          Alignment.X = zawRight
+          Kind = ztkSum
+          Level = zrMasterSubDetail
+          Variable = zrvTotal2
+        end
+      end
+    end
+    object zrMasterDetailFooter: TZRBand
+      Left = 2
+      Height = 1
+      Top = 23
+      Width = 38
+      Frame.Top = 1
+      Stretch = False
+      BandType = zbtDetailFooter
+    end
+    object zrMasterFooter: TZRBand
+      Left = 2
+      Height = 3
+      Top = 24
+      Width = 38
+      Stretch = False
+      BandType = zbtFooter
+      object ZRLabel23: TZRLabel
+        Left = 2
+        Height = 1
+        Top = 1
+        Width = 6
+        AutoSize = zasWidth
+        Caption = 'Total:'
+      end
+      object ZRLabel29: TZRLabel
+        Left = 20
+        Height = 1
+        Top = 1
+        Width = 16
+        Caption = 'ZRLabel29'
+      end
+    end
+  end
+  object dsCustomers: TDataSource
+    DataSet = taCustomers
+    Left = 304
+    Top = 64
+  end
+  object zrComposite: TZRComposite
+    Font.Name = 'Courier New'
+    Title = 'Composite report'
+    PageWidth = 41
+    PageHeight = 40
+    OnAddReports = zrCompositeAddReports
+    Left = 264
+    Top = 104
+  end
+  object taCustomers: TDbf
+    FilePath = 'D:\lazarus-components\ZREPORT\DEMO\'
+    IndexDefs = <>
+    TableName = 'CUSTOMER.DBF'
+    TableLevel = 7
+    FilterOptions = []
+    Left = 266
+    Top = 64
+  end
+  object taOrders: TDbf
+    FilePath = 'D:\lazarus-components\ZREPORT\DEMO\'
+    IndexDefs = <>
+    TableName = 'ORDERS.DBF'
+    TableLevel = 4
+    FilterOptions = []
+    Left = 344
+    Top = 64
+  end
+end

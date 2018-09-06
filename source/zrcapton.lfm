@@ -1,0 +1,92 @@
+object ZRCaptionForm: TZRCaptionForm
+  Left = 337
+  Height = 278
+  Top = 119
+  Width = 430
+  ActiveControl = Memo
+  BorderStyle = bsDialog
+  Caption = 'Caption editor'
+  ClientHeight = 278
+  ClientWidth = 430
+  Position = poScreenCenter
+  LCLVersion = '1.9.0.0'
+  object Bevel1: TBevel
+    Left = 8
+    Height = 229
+    Top = 8
+    Width = 413
+    Shape = bsFrame
+  end
+  object LineCount: TLabel
+    Left = 12
+    Height = 17
+    Top = 12
+    Width = 169
+    AutoSize = False
+    Caption = '0 lines'
+    ParentColor = False
+  end
+  object Memo: TMemo
+    Left = 16
+    Height = 201
+    Top = 28
+    Width = 397
+    OnChange = UpdateStatus
+    OnKeyDown = MemoKeyDown
+    ScrollBars = ssBoth
+    TabOrder = 0
+  end
+  object OKBtn: TButton
+    Left = 262
+    Height = 25
+    Top = 245
+    Width = 75
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 3
+  end
+  object CancelBtn: TButton
+    Left = 346
+    Height = 25
+    Top = 245
+    Width = 75
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object LoadBtn: TButton
+    Left = 10
+    Height = 25
+    Top = 245
+    Width = 75
+    Caption = '&Load...'
+    OnClick = FileOpen
+    TabOrder = 1
+  end
+  object SaveBtn: TButton
+    Left = 94
+    Height = 25
+    Top = 245
+    Width = 75
+    Caption = '&Save...'
+    OnClick = FileSave
+    TabOrder = 2
+  end
+  object OpenDialog: TOpenDialog
+    Title = 'Load string list'
+    DefaultExt = '.TXT'
+    Filter = 'Text files (*.TXT)|*.TXT|Config files (*.SYS;*.INI)|*.SYS;*.INI|Batch files (*.BAT)|*.BAT|All files (*.*)|*.*'
+    Options = [ofHideReadOnly, ofShowHelp, ofPathMustExist, ofFileMustExist]
+    Left = 20
+    Top = 32
+  end
+  object SaveDialog: TSaveDialog
+    Title = 'Save string list'
+    Filter = 'Text files (*.TXT)|*.TXT|Config files (*.SYS;*.INI)|*.SYS;*.INI|Batch files (*.BAT)|*.BAT|All files (*.*)|*.*'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofShowHelp, ofPathMustExist]
+    Left = 48
+    Top = 32
+  end
+end
