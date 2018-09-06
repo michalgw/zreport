@@ -1,42 +1,58 @@
 object ZRProgressForm: TZRProgressForm
   Cursor = crAppStart
   Left = 233
-  Height = 111
+  Height = 85
   Top = 161
-  Width = 200
+  Width = 233
   BorderIcons = [biMinimize, biMaximize]
   BorderStyle = bsSizeToolWin
   Caption = 'Printing process'
-  ClientHeight = 111
-  ClientWidth = 200
+  ClientHeight = 85
+  ClientWidth = 233
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   Position = poScreenCenter
   LCLVersion = '1.9.0.0'
   object Info: TLabel
-    Left = 0
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Gauge
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
     Height = 13
-    Top = 28
-    Width = 190
+    Top = 32
+    Width = 217
     Alignment = taCenter
     Anchors = [akTop, akLeft, akRight]
     AutoSize = False
+    BorderSpacing.Around = 8
     ParentColor = False
   end
   object Gauge: TProgressBar
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 16
     Top = 8
-    Width = 174
+    Width = 217
     Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 8
     TabOrder = 0
   end
   object Cancel: TBitBtn
-    Left = 53
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Info
+    AnchorSideTop.Side = asrBottom
+    Left = 73
     Height = 25
-    Top = 52
+    Top = 53
     Width = 87
+    BorderSpacing.Around = 8
     Kind = bkCancel
     OnClick = CancelClick
     TabOrder = 1
