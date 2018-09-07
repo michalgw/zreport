@@ -747,7 +747,6 @@ object fmMain: TfmMain
     Top = 104
   end
   object taCustomers: TDbf
-    FilePath = 'D:\lazarus-components\ZREPORT\DEMO\'
     IndexDefs = <>
     TableName = 'CUSTOMER.DBF'
     TableLevel = 7
@@ -756,7 +755,6 @@ object fmMain: TfmMain
     Top = 64
   end
   object taOrders: TDbf
-    FilePath = 'D:\lazarus-components\ZREPORT\DEMO\'
     IndexDefs = <>
     TableName = 'ORDERS.DBF'
     TableLevel = 4
