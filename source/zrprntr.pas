@@ -247,7 +247,7 @@ implementation
 
 uses
   Dialogs, Forms,
-  ZRConst, ZRUtils, ZRStrUtl, ZReport, ZRPrev, PrintersDlgs;
+  ZRConst, ZRUtils, ZRStrUtl, ZReport, ZRPrev, ZRPrnDlg;
   //{$IFDEF WINDOWS}
   //,agPrnDlg
   //{$ENDIF};
@@ -838,6 +838,26 @@ end;
 
 function TZRPrinter.Setup: Boolean;
 begin
+  try
+    Result := TZRPrintForm.Execute(Self.Options, PageCount);
+    if Result then
+    begin
+      if Self.Options.Destination = zrdFile then
+        with TSaveDialog.Create(Application) do
+          try
+            Filter   := szrFileFilter;
+            Options  := Options + [ofOverwritePrompt,ofPathMustExist];
+            //FileName := Self.Options.FileName;
+            FileName := Self.Report.FileName;
+            Result   := Execute;
+            if Result then Self.Options.FileName := FileName;
+          finally
+            Free;
+          end;
+    end;
+  finally
+  end;
+  (*
   //with TfmPrinterSetup.Create(Application) do
   with TPrintDialog.Create(Application) do
     try
@@ -894,7 +914,7 @@ begin
     finally
       Free;
     end;
-(*
+
   with TPrintDialog.Create(Application) do
     try
       Options := [poPrintToFile,poPageNums,poWarning];

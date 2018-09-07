@@ -1,0 +1,399 @@
+object ZRPrintForm: TZRPrintForm
+  Left = 363
+  Height = 383
+  Top = 201
+  Width = 457
+  AutoSize = True
+  Caption = 'Print'
+  ClientHeight = 383
+  ClientWidth = 457
+  Position = poScreenCenter
+  LCLVersion = '1.9.0.0'
+  object gbPrinter: TGroupBox
+    Left = 8
+    Height = 86
+    Top = 8
+    Width = 441
+    Align = alTop
+    AutoSize = True
+    BorderSpacing.Around = 8
+    Caption = 'Printer'
+    ClientHeight = 66
+    ClientWidth = 437
+    TabOrder = 0
+    object lbPrinter: TLabel
+      AnchorSideLeft.Control = gbPrinter
+      AnchorSideTop.Control = cbPrinter
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 12
+      Width = 35
+      BorderSpacing.Around = 8
+      Caption = 'Printer'
+      ParentColor = False
+    end
+    object cbPrinter: TComboBox
+      AnchorSideLeft.Control = lbPrinter
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = gbPrinter
+      AnchorSideRight.Control = bbPrinterSettings
+      Left = 51
+      Height = 23
+      Top = 8
+      Width = 302
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Around = 8
+      ItemHeight = 15
+      OnChange = cbPrinterChange
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object bbPrinterSettings: TBitBtn
+      AnchorSideTop.Control = gbPrinter
+      AnchorSideRight.Control = gbPrinter
+      AnchorSideRight.Side = asrBottom
+      Left = 361
+      Height = 25
+      Top = 8
+      Width = 68
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Around = 8
+      Caption = 'Settings'
+      OnClick = bbPrinterSettingsClick
+      TabOrder = 1
+    end
+    object chbPrintToFile: TCheckBox
+      AnchorSideLeft.Control = gbPrinter
+      AnchorSideTop.Control = cbPrinter
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 39
+      Width = 78
+      BorderSpacing.Around = 8
+      Caption = 'Print to file'
+      TabOrder = 2
+    end
+  end
+  object gbPages: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = gbPrinter
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 82
+    Top = 102
+    Width = 255
+    AutoSize = True
+    BorderSpacing.Around = 8
+    Caption = 'Print range'
+    ClientHeight = 62
+    ClientWidth = 251
+    TabOrder = 1
+    object rbPagesAll: TRadioButton
+      AnchorSideLeft.Control = gbPages
+      AnchorSideTop.Control = gbPages
+      Left = 8
+      Height = 19
+      Top = 8
+      Width = 68
+      BorderSpacing.Around = 8
+      Caption = 'All pages'
+      Checked = True
+      TabOrder = 1
+      TabStop = True
+    end
+    object rbPagesFromTo: TRadioButton
+      AnchorSideLeft.Control = gbPages
+      AnchorSideTop.Control = rbPagesAll
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 35
+      Width = 51
+      BorderSpacing.Around = 8
+      Caption = 'Pages'
+      TabOrder = 0
+    end
+    object lbPgFrom: TLabel
+      AnchorSideLeft.Control = rbPagesFromTo
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = rbPagesFromTo
+      AnchorSideTop.Side = asrCenter
+      Left = 83
+      Height = 15
+      Top = 37
+      Width = 29
+      BorderSpacing.Left = 24
+      Caption = 'from:'
+      ParentColor = False
+    end
+    object lbPgTo: TLabel
+      AnchorSideLeft.Control = sePgFrom
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = rbPagesFromTo
+      AnchorSideTop.Side = asrCenter
+      Left = 173
+      Height = 15
+      Top = 37
+      Width = 14
+      BorderSpacing.Left = 9
+      Caption = 'to:'
+      ParentColor = False
+    end
+    object sePgFrom: TSpinEdit
+      AnchorSideLeft.Control = lbPgFrom
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = rbPagesFromTo
+      AnchorSideTop.Side = asrCenter
+      Left = 116
+      Height = 23
+      Top = 33
+      Width = 48
+      BorderSpacing.Around = 4
+      MinValue = 1
+      TabOrder = 2
+      Value = 1
+    end
+    object sePgTo: TSpinEdit
+      AnchorSideLeft.Control = lbPgTo
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = rbPagesFromTo
+      AnchorSideTop.Side = asrCenter
+      Left = 191
+      Height = 23
+      Top = 33
+      Width = 48
+      BorderSpacing.Right = 8
+      BorderSpacing.Around = 4
+      MinValue = 1
+      TabOrder = 3
+      Value = 1
+    end
+  end
+  object gbCopies: TGroupBox
+    AnchorSideLeft.Control = gbPages
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = gbPrinter
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = gbPages
+    AnchorSideBottom.Side = asrBottom
+    Left = 271
+    Height = 82
+    Top = 102
+    Width = 178
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    Caption = 'Copies'
+    ClientHeight = 62
+    ClientWidth = 174
+    TabOrder = 2
+    object lbCopies: TLabel
+      AnchorSideLeft.Control = gbCopies
+      AnchorSideTop.Control = gbCopies
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 24
+      Width = 95
+      BorderSpacing.Around = 8
+      Caption = 'Number of copies'
+      ParentColor = False
+    end
+    object seCopies: TSpinEdit
+      AnchorSideLeft.Control = lbCopies
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = gbCopies
+      AnchorSideTop.Side = asrCenter
+      Left = 111
+      Height = 23
+      Top = 20
+      Width = 50
+      BorderSpacing.Around = 8
+      MaxValue = 999999
+      MinValue = 1
+      TabOrder = 0
+      Value = 1
+    end
+  end
+  object BitBtnOk: TBitBtn
+    AnchorSideTop.Control = gbOptions
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BitBtnCancel
+    Left = 297
+    Height = 26
+    Top = 348
+    Width = 62
+    Anchors = [akTop, akRight]
+    AutoSize = True
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 3
+  end
+  object BitBtnCancel: TBitBtn
+    AnchorSideTop.Control = gbOptions
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 367
+    Height = 26
+    Top = 348
+    Width = 82
+    Anchors = [akTop, akRight]
+    AutoSize = True
+    BorderSpacing.Around = 8
+    Cancel = True
+    DefaultCaption = True
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object gbOptions: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = gbCopies
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 148
+    Top = 192
+    Width = 441
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Around = 8
+    Caption = 'Options'
+    ClientHeight = 128
+    ClientWidth = 437
+    TabOrder = 5
+    object lbCodePage: TLabel
+      AnchorSideLeft.Control = cbOEMConvert
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = eCodePage
+      AnchorSideTop.Side = asrCenter
+      Left = 154
+      Height = 15
+      Top = 12
+      Width = 57
+      BorderSpacing.Left = 18
+      BorderSpacing.Around = 8
+      Caption = 'Code page'
+      ParentColor = False
+    end
+    object cbOEMConvert: TCheckBox
+      AnchorSideLeft.Control = gbOptions
+      AnchorSideTop.Control = eCodePage
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 19
+      Top = 10
+      Width = 120
+      BorderSpacing.Around = 8
+      Caption = 'Convert code page'
+      TabOrder = 0
+    end
+    object cbEscapes: TComboBox
+      AnchorSideLeft.Control = lbEscapes
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = eCodePage
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Side = asrBottom
+      Left = 89
+      Height = 23
+      Top = 39
+      Width = 336
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+      ItemHeight = 15
+      Style = csDropDownList
+      TabOrder = 1
+    end
+    object lbEscapes: TLabel
+      AnchorSideLeft.Control = gbOptions
+      AnchorSideTop.Control = cbEscapes
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 43
+      Width = 73
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+      Caption = 'Escape model'
+      ParentColor = False
+    end
+    object eCodePage: TEdit
+      AnchorSideLeft.Control = lbCodePage
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = gbOptions
+      Left = 219
+      Height = 23
+      Top = 8
+      Width = 72
+      BorderSpacing.Around = 8
+      NumbersOnly = True
+      TabOrder = 2
+      Text = '1'
+    end
+    object cbIgnoreFontStyle: TCheckBox
+      AnchorSideLeft.Control = gbOptions
+      AnchorSideTop.Control = cbEscapes
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 70
+      Width = 106
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+      Caption = 'Ignore font style'
+      TabOrder = 3
+    end
+    object lbPaperType: TLabel
+      AnchorSideLeft.Control = gbOptions
+      AnchorSideTop.Control = cbPaperType
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 101
+      Width = 56
+      BorderSpacing.Around = 8
+      Caption = 'Paper type'
+      ParentColor = False
+    end
+    object cbPaperType: TComboBox
+      AnchorSideLeft.Control = lbPaperType
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbIgnoreFontStyle
+      AnchorSideTop.Side = asrBottom
+      Left = 72
+      Height = 23
+      Top = 97
+      Width = 136
+      BorderSpacing.Around = 8
+      ItemHeight = 15
+      Items.Strings = (
+        'Continuos'
+        'Folio'
+        'Sheet'
+      )
+      Style = csDropDownList
+      TabOrder = 4
+    end
+  end
+  object PrinterSetupDlg: TPrinterSetupDialog
+    Left = 304
+    Top = 24
+  end
+end

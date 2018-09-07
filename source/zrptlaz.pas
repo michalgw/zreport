@@ -9,7 +9,7 @@ interface
 
 uses
   ZRConst, ZRStrUtl, ZRStream, ZRPrntr, ZRPrev, ZRPrgres, ZRSearch, ZRCtrls, 
-  ZREval, ZRFormat, ZRUtils, ZREscape, ZReport, LazarusPackageIntf;
+  ZREval, ZRFormat, ZRUtils, ZREscape, ZReport, ZRPrnDlg, LazarusPackageIntf;
 
 implementation
 

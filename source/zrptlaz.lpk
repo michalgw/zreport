@@ -16,7 +16,7 @@
         </Debugging>
       </Linking>
     </CompilerOptions>
-    <Files Count="13">
+    <Files Count="14">
       <Item1>
         <Filename Value="zrconst.pas"/>
         <UnitName Value="ZRConst"/>
@@ -69,6 +69,10 @@
         <Filename Value="zreport.pas"/>
         <UnitName Value="ZReport"/>
       </Item13>
+      <Item14>
+        <Filename Value="zrprndlg.pas"/>
+        <UnitName Value="zrprndlg"/>
+      </Item14>
     </Files>
     <RequiredPkgs Count="4">
       <Item1>
