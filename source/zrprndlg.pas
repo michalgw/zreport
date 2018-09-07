@@ -56,7 +56,7 @@ implementation
 {$R *.lfm}
 
 uses
-  Printers;
+  Printers, ZRConst;
 
 { TZRPrintForm }
 
@@ -80,6 +80,30 @@ var
 begin
   TmpPrnIdx := Printer.PrinterIndex;
   Dlg := TZRPrintForm.Create(Application);
+
+  Dlg.Caption := szrPrintDialogCaption;
+  Dlg.cbIgnoreFontStyle.Caption := szrIgnoreFontStyles;
+  Dlg.cbOEMConvert.Caption := szrConvertToOEM;
+  Dlg.gbPrinter.Caption := szrPrintDialogPrinter;
+  Dlg.lbPrinter.Caption := szrPrintDialogPrinter;
+  Dlg.bbPrinterSettings.Caption := szrPrintDialogSetup;
+  Dlg.chbPrintToFile.Caption := szrPrintDialogPrToFile;
+  Dlg.gbPages.Caption := szrPrintDialogPrRange;
+  Dlg.rbPagesAll.Caption := szrPrintDialogRAll;
+  Dlg.rbPagesFromTo.Caption := szrPrintDialogRPages;
+  Dlg.lbPgFrom.Caption := szrPrintDialogRFrom;
+  Dlg.lbPgTo.Caption := szrPrintDialogRTo;
+  Dlg.gbCopies.Caption := szrPrintDialogCopies;
+  Dlg.lbCopies.Caption := szrPrintDialogNrCopies;
+  Dlg.gbOptions.Caption := szrPrintDialogOptions;
+  Dlg.lbCodePage.Caption := szrPrintDialogCP;
+  Dlg.lbEscapes.Caption := szrEscapeModel;
+  Dlg.lbPaperType.Caption := szrPrintDialogPaper;
+  Dlg.cbPaperType.Items.Clear;
+  Dlg.cbPaperType.Items.Add(szrPrintDialogPCont);
+  Dlg.cbPaperType.Items.Add(szrPrintDialogPFolio);
+  Dlg.cbPaperType.Items.Add(szrPrintDialogPSheet);
+
   Dlg.cbPrinter.Items.Clear;
   Dlg.cbPrinter.Items.AddStrings(Printer.Printers);
   Dlg.cbPrinter.ItemIndex := Printer.PrinterIndex;

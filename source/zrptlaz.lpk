@@ -71,9 +71,14 @@
       </Item13>
       <Item14>
         <Filename Value="zrprndlg.pas"/>
-        <UnitName Value="zrprndlg"/>
+        <UnitName Value="ZRPrnDlg"/>
       </Item14>
     </Files>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
+      <EnableI18NForLFM Value="True"/>
+    </i18n>
     <RequiredPkgs Count="4">
       <Item1>
         <PackageName Value="Printer4Lazarus"/>

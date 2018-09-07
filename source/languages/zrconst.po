@@ -1,0 +1,502 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: zrconst.szrbanddelete
+msgid ""
+"Band %s contains labels.\n"
+"Delete ?\n"
+msgstr ""
+
+#: zrconst.szrbooleanfalse
+msgid "False"
+msgstr ""
+
+#: zrconst.szrbooleantrue
+msgid "True"
+msgstr ""
+
+#: zrconst.szrcalculationerror
+msgid ""
+"Error evaluating '%s':\n"
+"%s\n"
+msgstr ""
+
+#: zrconst.szrcancel
+msgid "Cancel"
+msgstr ""
+
+#: zrconst.szrcircularmaster
+msgid "Circular links not allowed"
+msgstr ""
+
+#: zrconst.szrcircularvariable
+msgid "Illegal circular reference to '%s'"
+msgstr ""
+
+#: zrconst.szrcompleted
+msgid "complete"
+msgstr ""
+
+#: zrconst.szrcontrollerlibrary
+msgid "Controller variables '%s'"
+msgstr ""
+
+#: zrconst.szrconverttooem
+msgid "Convert code page"
+msgstr ""
+
+#: zrconst.szrdate
+msgid "dd/mm/yyyy"
+msgstr ""
+
+#: zrconst.szrdatetime
+msgid "dd/mm/yyyy hh:mm:ss"
+msgstr ""
+
+#: zrconst.szrdesignacbandsdelete
+msgctxt "zrconst.szrdesignacbandsdelete"
+msgid "Delete"
+msgstr ""
+
+#: zrconst.szrdesignacbandsnew
+msgctxt "zrconst.szrdesignacbandsnew"
+msgid "Controller"
+msgstr ""
+
+#: zrconst.szrdesignacbandsrename
+msgid "Rename"
+msgstr ""
+
+#: zrconst.szrdesignacgroupsdelete
+msgctxt "zrconst.szrdesignacgroupsdelete"
+msgid "Delete"
+msgstr ""
+
+#: zrconst.szrdesignacgroupsnew
+msgid "New"
+msgstr ""
+
+#: zrconst.szrdesignacvariablesdelete
+msgctxt "zrconst.szrdesignacvariablesdelete"
+msgid "Delete"
+msgstr ""
+
+#: zrconst.szrdesignacvariablesexpression
+msgid "Expression"
+msgstr ""
+
+#: zrconst.szrdesignacvariablesfield
+msgid "Field"
+msgstr ""
+
+#: zrconst.szrdesignacvariablestotal
+msgid "Aggregate"
+msgstr ""
+
+#: zrconst.szrdesigncellcontroller
+msgctxt "zrconst.szrdesigncellcontroller"
+msgid "Controller"
+msgstr ""
+
+#: zrconst.szrdesigncelldataset
+msgid "Data"
+msgstr ""
+
+#: zrconst.szrdesignclose
+msgid "&Close"
+msgstr ""
+
+#: zrconst.szrdesigngbbands
+msgid "Bands"
+msgstr ""
+
+#: zrconst.szrdesigngbdata
+msgid "Controllers"
+msgstr ""
+
+#: zrconst.szrdesigngbgroups
+msgid "Groups"
+msgstr ""
+
+#: zrconst.szrdesigngbvariables
+msgctxt "zrconst.szrdesigngbvariables"
+msgid "Variables"
+msgstr ""
+
+#: zrconst.szrdesigngrcontrollers
+msgid "|Report controllers list"
+msgstr ""
+
+#: zrconst.szrdesignladatafields
+msgctxt "zrconst.szrdesignladatafields"
+msgid "Fields"
+msgstr ""
+
+#: zrconst.szrdesignlavariableexpressions
+msgid "Expressions"
+msgstr ""
+
+#: zrconst.szrdesignlavariablefields
+msgctxt "zrconst.szrdesignlavariablefields"
+msgid "Fields"
+msgstr ""
+
+#: zrconst.szrdesignlavariabletotals
+msgid "Aggregates"
+msgstr ""
+
+#: zrconst.szrdesignlbdatafields
+msgid "|List of fields available"
+msgstr ""
+
+#: zrconst.szrdesignlbgroups
+msgid "|Groups of the current report level"
+msgstr ""
+
+#: zrconst.szrdesignlbvariableexpressions
+msgid "|List of expression variables"
+msgstr ""
+
+#: zrconst.szrdesignlbvariablefields
+msgid "|List of data field variables"
+msgstr ""
+
+#: zrconst.szrdesignlbvariabletotals
+msgid "|List of aggregate variables"
+msgstr ""
+
+#: zrconst.szrdesignnone
+msgctxt "zrconst.szrdesignnone"
+msgid "<none>"
+msgstr ""
+
+#: zrconst.szrdesignsurebanddelete
+msgid "Delete panel %s. Are you sure?"
+msgstr ""
+
+#: zrconst.szrdesignsuregroupdelete
+msgid "Delete group %s. Are you sure?"
+msgstr ""
+
+#: zrconst.szrdesigntsbands
+msgid "Bands and groups"
+msgstr ""
+
+#: zrconst.szrdesigntsvars
+msgctxt "zrconst.szrdesigntsvars"
+msgid "Variables"
+msgstr ""
+
+#: zrconst.szrdesigntvbands
+msgid "|Report bands"
+msgstr ""
+
+#: zrconst.szrescapemodel
+msgid "ESC-sequence"
+msgstr ""
+
+#: zrconst.szrescapemodelcustom
+msgid "<custom>"
+msgstr ""
+
+#: zrconst.szrescapemodelnone
+msgctxt "zrconst.szrescapemodelnone"
+msgid "<none>"
+msgstr ""
+
+#: zrconst.szrexit
+msgid "E&xit"
+msgstr ""
+
+#: zrconst.szrexpressionerror
+msgid "Error in expression '%s'"
+msgstr ""
+
+#: zrconst.szrexpressionparse
+msgid "Expression '%s' not yet parsed"
+msgstr ""
+
+#: zrconst.szrfilefilter
+msgid "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+msgstr ""
+
+#: zrconst.szrfirstpagehint
+msgid "First page"
+msgstr ""
+
+#: zrconst.szrgotopageno
+msgid "Go to page"
+msgstr ""
+
+#: zrconst.szrignorefontstyles
+msgid "Ignore font styles"
+msgstr ""
+
+#: zrconst.szrillegalarguments
+msgid "Wrong number of arguments for '%s'"
+msgstr ""
+
+#: zrconst.szrillegalbitwise
+msgid "Bitwise operation should have integer operands"
+msgstr ""
+
+#: zrconst.szrillegalbracket
+msgid "Invalid usage of '%s' in expression '%s'"
+msgstr ""
+
+#: zrconst.szrillegaldate
+msgid "Invalid date operation"
+msgstr ""
+
+#: zrconst.szrillegallogics
+msgid "Logical operation should have boolean operands"
+msgstr ""
+
+#: zrconst.szrillegalpagerange
+msgid "Invalid page range: %d..%d"
+msgstr ""
+
+#: zrconst.szrillegalunary
+msgid "Invalid unary '%s' in expression '%s'"
+msgstr ""
+
+#: zrconst.szrinvaliddate
+msgid "Invalid date in expression '%s'"
+msgstr ""
+
+#: zrconst.szrinvalidfilename
+msgid "Invalid file name: %s"
+msgstr ""
+
+#: zrconst.szrinvalidnumeric
+msgid "Invalid numeric in expresison '%s'"
+msgstr ""
+
+#: zrconst.szrinvalidstring
+msgid "Invalid string in expression '%s'"
+msgstr ""
+
+#: zrconst.szrlastpagehint
+msgid "Last page"
+msgstr ""
+
+#: zrconst.szrloadreporthint
+msgid "Load report"
+msgstr ""
+
+#: zrconst.szrmissingbracket
+msgid "Closing '%s' missing in expression '%s'"
+msgstr ""
+
+#: zrconst.szrnextpagehint
+msgid "Next page"
+msgstr ""
+
+#: zrconst.szrnochildband
+msgid "Bands of %s type cannot have children"
+msgstr ""
+
+#: zrconst.szrnocontrollerband
+msgid "Bands of %s type cannot have subcontrollers"
+msgstr ""
+
+#: zrconst.szrnostretch
+msgid "%s band cannot stretch"
+msgstr ""
+
+#: zrconst.szrof
+msgid "of"
+msgstr ""
+
+#: zrconst.szrok
+msgid "OK"
+msgstr ""
+
+#: zrconst.szrpagenohint
+msgid "Go to page by number"
+msgstr ""
+
+#: zrconst.szrpagenumber
+msgid "Page"
+msgstr ""
+
+#: zrconst.szrparentband
+msgid "A component of class %s can only belong to report bands"
+msgstr ""
+
+#: zrconst.szrparentreport
+msgid "A component of class %s can only belong to report or report bands"
+msgstr ""
+
+#: zrconst.szrprevpagehint
+msgid "Previous page"
+msgstr ""
+
+#: zrconst.szrprintdialogcaption
+msgctxt "zrconst.szrprintdialogcaption"
+msgid "Printer setup"
+msgstr ""
+
+#: zrconst.szrprintdialogcopies
+msgid "Copies"
+msgstr ""
+
+#: zrconst.szrprintdialogcp
+msgid "Code page"
+msgstr ""
+
+#: zrconst.szrprintdialognrcopies
+msgid "Number of copies"
+msgstr ""
+
+#: zrconst.szrprintdialogoptions
+msgid "Options"
+msgstr ""
+
+#: zrconst.szrprintdialogpaper
+msgid "Paper tpe"
+msgstr ""
+
+#: zrconst.szrprintdialogpcont
+msgid "Continuos"
+msgstr ""
+
+#: zrconst.szrprintdialogpfolio
+msgid "Folio"
+msgstr ""
+
+#: zrconst.szrprintdialogprinter
+msgid "Printer"
+msgstr ""
+
+#: zrconst.szrprintdialogprrange
+msgid "Print range"
+msgstr ""
+
+#: zrconst.szrprintdialogprtofile
+msgid "Print to file"
+msgstr ""
+
+#: zrconst.szrprintdialogpsheet
+msgid "Sheet"
+msgstr ""
+
+#: zrconst.szrprintdialograll
+msgid "All pages"
+msgstr ""
+
+#: zrconst.szrprintdialogrfrom
+msgid "from:"
+msgstr ""
+
+#: zrconst.szrprintdialogrpages
+msgid "Pages"
+msgstr ""
+
+#: zrconst.szrprintdialogrto
+msgid "to:"
+msgstr ""
+
+#: zrconst.szrprintdialogsetup
+msgid "Setup"
+msgstr ""
+
+#: zrconst.szrprinternotbusy
+msgid "New document not started"
+msgstr ""
+
+#: zrconst.szrprinternotfinished
+msgid "Report generating cancelled"
+msgstr ""
+
+#: zrconst.szrprinternotready
+msgid "Not ready to start new document"
+msgstr ""
+
+#: zrconst.szrprinterpageindex
+msgid "Out of page bounds, page %d/%d, line %d"
+msgstr ""
+
+#: zrconst.szrprintersetup
+msgctxt "zrconst.szrprintersetup"
+msgid "Printer setup"
+msgstr ""
+
+#: zrconst.szrprinting
+msgid "Printing.."
+msgstr ""
+
+#: zrconst.szrprintreport
+msgid "Print"
+msgstr ""
+
+#: zrconst.szrprintreporthint
+msgid "Print report - Ctrl+P"
+msgstr ""
+
+#: zrconst.szrprocessing
+msgid "Processing.."
+msgstr ""
+
+#: zrconst.szrrecordcount
+msgid "Count"
+msgstr ""
+
+#: zrconst.szrrecordnumber
+msgid "# p/p"
+msgstr ""
+
+#: zrconst.szrreporttitle
+msgid "Title"
+msgstr ""
+
+#: zrconst.szrsavereporthint
+msgid "Save report - Ctrl+S"
+msgstr ""
+
+#: zrconst.szrsearchdlgcaption
+msgid "Search text"
+msgstr ""
+
+#: zrconst.szrsearchdlgcontinuesearch
+msgid "&Continue"
+msgstr ""
+
+#: zrconst.szrsearchdlgfromcurrent
+msgid "&From current position"
+msgstr ""
+
+#: zrconst.szrsearchdlgignorecase
+msgid "Case &sensitive"
+msgstr ""
+
+#: zrconst.szrsearchdlginvitation
+msgid "&Text to search"
+msgstr ""
+
+#: zrconst.szrsearchdlgstartsearch
+msgid "&Find"
+msgstr ""
+
+#: zrconst.szrsearchhint
+msgid ""
+"Search - F7,\n"
+"Continue - Shift+F7\n"
+msgstr ""
+
+#: zrconst.szrsearchnotfound
+msgid "Search string '%s' not found"
+msgstr ""
+
+#: zrconst.szrsearchreport
+msgid "Search"
+msgstr ""
+
+#: zrconst.szrtime
+msgid "hh:mm:ss"
+msgstr ""
+
+#: zrconst.szrunknownentry
+msgid "Unknown function or variable in expression '%s'"
+msgstr ""
+

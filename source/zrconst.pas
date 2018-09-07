@@ -40,10 +40,26 @@ resourcestring
   szrFileFilter         = 'Text files (*.txt)|*.txt|All files (*.*)|*.*';
   szrEscapeModelCustom  = '<custom>';
   szrEscapeModelNone    = '<none>';
-  szrConvertToOEM        = 'Convert to OEM';
+  szrConvertToOEM        = 'Convert code page';
   szrIgnoreFontStyles    = 'Ignore font styles';
   szrEscapeModel         = 'ESC-sequence';
   szrPrintDialogCaption  = 'Printer setup';
+  szrPrintDialogPrinter  = 'Printer';
+  szrPrintDialogSetup    = 'Setup';
+  szrPrintDialogPrToFile = 'Print to file';
+  szrPrintDialogPrRange  = 'Print range';
+  szrPrintDialogRAll     = 'All pages';
+  szrPrintDialogRPages   = 'Pages';
+  szrPrintDialogRFrom    = 'from:';
+  szrPrintDialogRTo      = 'to:';
+  szrPrintDialogCopies   = 'Copies';
+  szrPrintDialogNrCopies = 'Number of copies';
+  szrPrintDialogOptions  = 'Options';
+  szrPrintDialogCP       = 'Code page';
+  szrPrintDialogPaper    = 'Paper tpe';
+  szrPrintDialogPCont    = 'Continuos';
+  szrPrintDialogPFolio   = 'Folio';
+  szrPrintDialogPSheet   = 'Sheet';
 
   szrOK    = 'OK';
   szrCancel= 'Cancel';

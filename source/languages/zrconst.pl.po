@@ -1,0 +1,518 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.5\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: pl_PL\n"
+
+#: zrconst.szrbanddelete
+msgid ""
+"Band %s contains labels.\n"
+"Delete ?\n"
+msgstr ""
+"Wstęga %s zawiera etykiety.\n"
+"Usunąć ?\n"
+
+#: zrconst.szrbooleanfalse
+msgid "False"
+msgstr "Fałsz"
+
+#: zrconst.szrbooleantrue
+msgid "True"
+msgstr "Prawda"
+
+#: zrconst.szrcalculationerror
+msgid ""
+"Error evaluating '%s':\n"
+"%s\n"
+msgstr ""
+"Błąd przy obliczaniu wyrażenia '%s':\n"
+"%s\n"
+
+#: zrconst.szrcancel
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: zrconst.szrcircularmaster
+msgid "Circular links not allowed"
+msgstr "Zapętlone połączenia są niedozwolone"
+
+#: zrconst.szrcircularvariable
+msgid "Illegal circular reference to '%s'"
+msgstr "Niepoprawne wywołanie rekurencyjne '%s'"
+
+#: zrconst.szrcompleted
+msgid "complete"
+msgstr "wykonano"
+
+#: zrconst.szrcontrollerlibrary
+msgid "Controller variables '%s'"
+msgstr "Zmienne kontrolera '%s'"
+
+#: zrconst.szrconverttooem
+msgid "Convert code page"
+msgstr "Konwertuj stronę kodową"
+
+#: zrconst.szrdate
+msgid "dd/mm/yyyy"
+msgstr "dd/mm/yyyy"
+
+#: zrconst.szrdatetime
+msgid "dd/mm/yyyy hh:mm:ss"
+msgstr "dd/mm/yyyy hh:mm:ss"
+
+#: zrconst.szrdesignacbandsdelete
+msgctxt "zrconst.szrdesignacbandsdelete"
+msgid "Delete"
+msgstr "Usuń"
+
+#: zrconst.szrdesignacbandsnew
+msgctxt "zrconst.szrdesignacbandsnew"
+msgid "Controller"
+msgstr "Kontroler"
+
+#: zrconst.szrdesignacbandsrename
+msgid "Rename"
+msgstr "Zmień nazwę"
+
+#: zrconst.szrdesignacgroupsdelete
+msgctxt "zrconst.szrdesignacgroupsdelete"
+msgid "Delete"
+msgstr "Usuń"
+
+#: zrconst.szrdesignacgroupsnew
+msgid "New"
+msgstr "Nowy"
+
+#: zrconst.szrdesignacvariablesdelete
+msgctxt "zrconst.szrdesignacvariablesdelete"
+msgid "Delete"
+msgstr "Usuń"
+
+#: zrconst.szrdesignacvariablesexpression
+msgid "Expression"
+msgstr "Wyrażenie"
+
+#: zrconst.szrdesignacvariablesfield
+msgid "Field"
+msgstr "Pole"
+
+#: zrconst.szrdesignacvariablestotal
+msgid "Aggregate"
+msgstr "Agregacja"
+
+#: zrconst.szrdesigncellcontroller
+msgctxt "zrconst.szrdesigncellcontroller"
+msgid "Controller"
+msgstr "Kontroler"
+
+#: zrconst.szrdesigncelldataset
+msgid "Data"
+msgstr "Dane"
+
+#: zrconst.szrdesignclose
+msgid "&Close"
+msgstr "&Zamknij"
+
+#: zrconst.szrdesigngbbands
+msgid "Bands"
+msgstr "Wstęgi"
+
+#: zrconst.szrdesigngbdata
+msgid "Controllers"
+msgstr "Kontrolery"
+
+#: zrconst.szrdesigngbgroups
+msgid "Groups"
+msgstr "Grupy"
+
+#: zrconst.szrdesigngbvariables
+msgctxt "zrconst.szrdesigngbvariables"
+msgid "Variables"
+msgstr "Zmienne"
+
+#: zrconst.szrdesigngrcontrollers
+msgid "|Report controllers list"
+msgstr "|Lista kontrolerów raportu"
+
+#: zrconst.szrdesignladatafields
+msgctxt "zrconst.szrdesignladatafields"
+msgid "Fields"
+msgstr "Pola"
+
+#: zrconst.szrdesignlavariableexpressions
+msgid "Expressions"
+msgstr "Wyrażenia"
+
+#: zrconst.szrdesignlavariablefields
+msgctxt "zrconst.szrdesignlavariablefields"
+msgid "Fields"
+msgstr "Pola"
+
+#: zrconst.szrdesignlavariabletotals
+msgid "Aggregates"
+msgstr "Agregacja"
+
+#: zrconst.szrdesignlbdatafields
+msgid "|List of fields available"
+msgstr "|Lista dostępnych pól"
+
+#: zrconst.szrdesignlbgroups
+msgid "|Groups of the current report level"
+msgstr "|Grupy raportu z bieżącego poziomu"
+
+#: zrconst.szrdesignlbvariableexpressions
+msgid "|List of expression variables"
+msgstr "|Lista wyrażeń"
+
+#: zrconst.szrdesignlbvariablefields
+msgid "|List of data field variables"
+msgstr "|Lista zmiennych dla pól"
+
+#: zrconst.szrdesignlbvariabletotals
+msgid "|List of aggregate variables"
+msgstr "|Lista agregowanych zmiennych"
+
+#: zrconst.szrdesignnone
+msgctxt "zrconst.szrdesignnone"
+msgid "<none>"
+msgstr "<brak>"
+
+#: zrconst.szrdesignsurebanddelete
+msgid "Delete panel %s. Are you sure?"
+msgstr "Usunięcie wstęgi %s. Jesteś pewien?"
+
+#: zrconst.szrdesignsuregroupdelete
+msgid "Delete group %s. Are you sure?"
+msgstr "Usunięcie grupy %s. Jesteś pewien?"
+
+#: zrconst.szrdesigntsbands
+msgid "Bands and groups"
+msgstr "Wstęgi i grupy"
+
+#: zrconst.szrdesigntsvars
+msgctxt "zrconst.szrdesigntsvars"
+msgid "Variables"
+msgstr "Zmienne"
+
+#: zrconst.szrdesigntvbands
+msgid "|Report bands"
+msgstr "|Wstęgi raportu"
+
+#: zrconst.szrescapemodel
+msgid "ESC-sequence"
+msgstr "Sekwencja znaków sterujących"
+
+#: zrconst.szrescapemodelcustom
+msgid "<custom>"
+msgstr "<inny>"
+
+#: zrconst.szrescapemodelnone
+msgctxt "zrconst.szrescapemodelnone"
+msgid "<none>"
+msgstr "<brak>"
+
+#: zrconst.szrexit
+msgid "E&xit"
+msgstr "&Wyjście"
+
+#: zrconst.szrexpressionerror
+msgid "Error in expression '%s'"
+msgstr "Niepoprawne wyrażenie '%s'"
+
+#: zrconst.szrexpressionparse
+msgid "Expression '%s' not yet parsed"
+msgstr "Wyrażenie '%s' nie zostało zinterpretowane"
+
+#: zrconst.szrfilefilter
+msgid "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+msgstr "Pliki tekstowe (*.txt)|*.txt|Wszystkie pliki (*.*)|*.*"
+
+#: zrconst.szrfirstpagehint
+msgid "First page"
+msgstr "Pierwsza strona"
+
+#: zrconst.szrgotopageno
+msgid "Go to page"
+msgstr "Strona"
+
+#: zrconst.szrignorefontstyles
+msgid "Ignore font styles"
+msgstr "Ignoruj styl czcionek"
+
+#: zrconst.szrillegalarguments
+msgid "Wrong number of arguments for '%s'"
+msgstr "Niepoprawna ilość argumentów dla '%s'"
+
+#: zrconst.szrillegalbitwise
+msgid "Bitwise operation should have integer operands"
+msgstr "Operacje na bitach powinny mieć liczbowe operatory"
+
+#: zrconst.szrillegalbracket
+msgid "Invalid usage of '%s' in expression '%s'"
+msgstr "Niepoprawne użycie '%s' w wyrażeniu '%s'"
+
+#: zrconst.szrillegaldate
+msgid "Invalid date operation"
+msgstr "Niepoprawna operacja na dacie"
+
+#: zrconst.szrillegallogics
+msgid "Logical operation should have boolean operands"
+msgstr "Operacje logiczne powinny mieć logiczne operatory"
+
+#: zrconst.szrillegalpagerange
+msgid "Invalid page range: %d..%d"
+msgstr "Niepoprawny zakres stron: %d..%d"
+
+#: zrconst.szrillegalunary
+msgid "Invalid unary '%s' in expression '%s'"
+msgstr "Niepoprawny operator unarny '%s' w wyrażeniu '%s'"
+
+#: zrconst.szrinvaliddate
+msgid "Invalid date in expression '%s'"
+msgstr "Niepoprawna data w wyrażeniu '%s'"
+
+#: zrconst.szrinvalidfilename
+msgid "Invalid file name: %s"
+msgstr "Niepoprawna nazwa pliku: %s"
+
+#: zrconst.szrinvalidnumeric
+msgid "Invalid numeric in expresison '%s'"
+msgstr "Niepoprawna liczba w wyrażeniu '%s'"
+
+#: zrconst.szrinvalidstring
+msgid "Invalid string in expression '%s'"
+msgstr "Niepoprawny ciąg znaków w wyrażeniu '%s'"
+
+#: zrconst.szrlastpagehint
+msgid "Last page"
+msgstr "Ostatnia strona"
+
+#: zrconst.szrloadreporthint
+msgid "Load report"
+msgstr "Wczytaj raport"
+
+#: zrconst.szrmissingbracket
+msgid "Closing '%s' missing in expression '%s'"
+msgstr "Brak zamknięcia '%s' w wyrażeniu '%s'"
+
+#: zrconst.szrnextpagehint
+msgid "Next page"
+msgstr "Następna strona"
+
+#: zrconst.szrnochildband
+msgid "Bands of %s type cannot have children"
+msgstr "Wstęga typu %s nie może posiadać potomków"
+
+#: zrconst.szrnocontrollerband
+msgid "Bands of %s type cannot have subcontrollers"
+msgstr "Wstęga typu %s nie może posiadać podkontrolek"
+
+#: zrconst.szrnostretch
+msgid "%s band cannot stretch"
+msgstr "Wstęga %s nie może być rozciągana"
+
+#: zrconst.szrof
+msgid "of"
+msgstr "z"
+
+#: zrconst.szrok
+msgid "OK"
+msgstr "OK"
+
+#: zrconst.szrpagenohint
+msgid "Go to page by number"
+msgstr "Przejdź do strony o numerze"
+
+#: zrconst.szrpagenumber
+msgid "Page"
+msgstr "Str."
+
+#: zrconst.szrparentband
+msgid "A component of class %s can only belong to report bands"
+msgstr "Komponent klasy %s można umieścić tylko na wstędze"
+
+#: zrconst.szrparentreport
+msgid "A component of class %s can only belong to report or report bands"
+msgstr "Komponent klasy %s można umieścić tylko na raporcie lub na wstędze"
+
+#: zrconst.szrprevpagehint
+msgid "Previous page"
+msgstr "Poprzednia strona"
+
+#: zrconst.szrprintdialogcaption
+msgctxt "zrconst.szrprintdialogcaption"
+msgid "Printer setup"
+msgstr "Ustawienia drukarki"
+
+#: zrconst.szrprintdialogcopies
+msgid "Copies"
+msgstr "Kopie"
+
+#: zrconst.szrprintdialogcp
+msgid "Code page"
+msgstr "Strona kodowa"
+
+#: zrconst.szrprintdialognrcopies
+msgid "Number of copies"
+msgstr "Liczba kopii"
+
+#: zrconst.szrprintdialogoptions
+msgid "Options"
+msgstr "Opcje"
+
+#: zrconst.szrprintdialogpaper
+msgid "Paper tpe"
+msgstr "Rodzaj papieru"
+
+#: zrconst.szrprintdialogpcont
+msgid "Continuos"
+msgstr "Ciągły"
+
+#: zrconst.szrprintdialogpfolio
+msgid "Folio"
+msgstr "Folio"
+
+#: zrconst.szrprintdialogprinter
+msgid "Printer"
+msgstr "Drukarka"
+
+#: zrconst.szrprintdialogprrange
+msgid "Print range"
+msgstr "Zakres wydruku"
+
+#: zrconst.szrprintdialogprtofile
+msgid "Print to file"
+msgstr "Drukuj do pliku"
+
+#: zrconst.szrprintdialogpsheet
+msgid "Sheet"
+msgstr "Arkusz"
+
+#: zrconst.szrprintdialograll
+msgid "All pages"
+msgstr "Wszystkie strony"
+
+#: zrconst.szrprintdialogrfrom
+msgid "from:"
+msgstr "od:"
+
+#: zrconst.szrprintdialogrpages
+msgid "Pages"
+msgstr "Strony"
+
+#: zrconst.szrprintdialogrto
+msgid "to:"
+msgstr "do:"
+
+#: zrconst.szrprintdialogsetup
+msgid "Setup"
+msgstr "Ustawienia"
+
+#: zrconst.szrprinternotbusy
+msgid "New document not started"
+msgstr "Nie zaczęto nowego dokumentu"
+
+#: zrconst.szrprinternotfinished
+msgid "Report generating cancelled"
+msgstr "Generowanie raportu zostało przerwane"
+
+#: zrconst.szrprinternotready
+msgid "Not ready to start new document"
+msgstr "Drukarka nie jest gotowa"
+
+#: zrconst.szrprinterpageindex
+msgid "Out of page bounds, page %d/%d, line %d"
+msgstr "Poza zakresem strony, strona %d/%d, linia %d"
+
+#: zrconst.szrprintersetup
+msgctxt "zrconst.szrprintersetup"
+msgid "Printer setup"
+msgstr "Ustawienia drukarki"
+
+#: zrconst.szrprinting
+msgid "Printing.."
+msgstr "Drukowanie..."
+
+#: zrconst.szrprintreport
+msgid "Print"
+msgstr "Wydruk"
+
+#: zrconst.szrprintreporthint
+msgid "Print report - Ctrl+P"
+msgstr "Drukuj raport - Ctrl+P"
+
+#: zrconst.szrprocessing
+msgid "Processing.."
+msgstr "Przetwarzanie..."
+
+#: zrconst.szrrecordcount
+msgid "Count"
+msgstr "rek."
+
+#: zrconst.szrrecordnumber
+msgid "# p/p"
+msgstr "# p/p"
+
+#: zrconst.szrreporttitle
+msgid "Title"
+msgstr "Nagłówek"
+
+#: zrconst.szrsavereporthint
+msgid "Save report - Ctrl+S"
+msgstr "Zapisz raport - Ctrl+S"
+
+#: zrconst.szrsearchdlgcaption
+msgid "Search text"
+msgstr "Szukaj tekstu"
+
+#: zrconst.szrsearchdlgcontinuesearch
+msgid "&Continue"
+msgstr "Szukaj &następne"
+
+#: zrconst.szrsearchdlgfromcurrent
+msgid "&From current position"
+msgstr "Szukaj od &bieżącej pozycji"
+
+#: zrconst.szrsearchdlgignorecase
+msgid "Case &sensitive"
+msgstr "&Uwzględniaj wielkość liter"
+
+#: zrconst.szrsearchdlginvitation
+msgid "&Text to search"
+msgstr "Szukany &tekst"
+
+#: zrconst.szrsearchdlgstartsearch
+msgid "&Find"
+msgstr "&Szukaj"
+
+#: zrconst.szrsearchhint
+msgid ""
+"Search - F7,\n"
+"Continue - Shift+F7\n"
+msgstr ""
+"Szukaj - F7,\n"
+"Szukaj następne - Shift+F7\n"
+
+#: zrconst.szrsearchnotfound
+msgid "Search string '%s' not found"
+msgstr "Nie znaleziono wyrażenia '%s'"
+
+#: zrconst.szrsearchreport
+msgid "Search"
+msgstr "Szukaj"
+
+#: zrconst.szrtime
+msgid "hh:mm:ss"
+msgstr "hh:mm:ss"
+
+#: zrconst.szrunknownentry
+msgid "Unknown function or variable in expression '%s'"
+msgstr "Nieznana funkcja lub zmienna w wyrażeniu '%s'"
