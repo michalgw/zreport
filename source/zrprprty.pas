@@ -71,10 +71,10 @@ procedure TZRFontProperty.Edit;
 begin
   with TFontDialog.Create(Application) do
   try
-    Font        := TFont(GetOrdValue);
+    Font        := TFont(GetObjectValue(TFont));
     HelpContext := hcDFontEditor;
     Options     := [fdFixedPitchOnly, fdForceFontExist, fdNoSimulations, fdShowHelp];
-    if Execute then SetOrdValue(Longint(Font));
+    if Execute then SetPtrValue(Font);
   finally
     Free;
   end;

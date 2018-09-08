@@ -23,10 +23,13 @@ type
   TZRNotify = {packed} record
     Msg       : Cardinal;
     Operation : TZROperation;
+    {$IFDEF CPU64}
+    Rserved1  : Cardinal;
+    {$ENDIF}
     //Reserved1 : Byte;
     //Reserved2 : Word;
     Sender    : TComponent;
-    Result    : Longint;
+    Result    : PtrInt;
   end;
 
 type

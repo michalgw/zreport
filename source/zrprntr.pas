@@ -229,18 +229,18 @@ type
   end;
 
 type
-  TCMZRProgressUpdate = packed record
+  TCMZRProgressUpdate = record
     Msg       : Cardinal;
-    Position  : Longint;
+    Position  : PtrInt;
     Sender    : TZRPrinter;
-    Result    : Longint;
+    Result    : PtrInt;
   end;
 
-  TCMZRPageFinished = packed record
+  TCMZRPageFinished = record
     Msg       : Cardinal;
-    PageCount : Longint;
+    PageCount : PtrInt;
     Sender    : TZRPrinter;
-    Result    : Longint;
+    Result    : PtrInt;
   end;
 
 implementation
@@ -646,9 +646,9 @@ procedure TZRPrinter.EndPage;
 begin
   CheckStatus(zpsBusy);
   if Assigned(ProgressForm) then
-    ProgressForm.Perform(CM_ZRPAGEFINISHED, PageCount, Integer(Self));
+    ProgressForm.Perform(CM_ZRPAGEFINISHED, PageCount, PtrInt(Self));
   if Assigned(PreviewForm) then
-    PreviewForm .Perform(CM_ZRPAGEFINISHED, PageCount, Integer(Self));
+    PreviewForm .Perform(CM_ZRPAGEFINISHED, PageCount, PtrInt(Self));
 end;
 
 function TZRPrinter.Scissors: String;
@@ -672,9 +672,9 @@ procedure TZRPrinter.SetProgress(const Value: Integer);
 begin
   fProgress := Value;
   if Assigned(ProgressForm) then
-    ProgressForm.Perform(CM_ZRPROGRESSUPDATE, Progress, Integer(Self));
+    ProgressForm.Perform(CM_ZRPROGRESSUPDATE, Progress, PtrInt(Self));
   if Assigned(PreviewForm) then
-    PreviewForm .Perform(CM_ZRPROGRESSUPDATE, Progress, Integer(Self));
+    PreviewForm .Perform(CM_ZRPROGRESSUPDATE, Progress, PtrInt(Self));
 end;
 
 procedure TZRPrinter.SaveToStream(Stream: TStream);

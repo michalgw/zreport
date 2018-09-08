@@ -68,7 +68,7 @@ end;
 
 procedure TZReportControl.Notify(Operation: TZROperation);
 begin
-  Perform(ZR_NOTIFY, Integer(Operation), Integer(Self));
+  Perform(ZR_NOTIFY, Integer(Operation), PtrInt(Self));
 end;
 
 procedure TZReportControl.ZRNotify(var Message: TZRNotify);

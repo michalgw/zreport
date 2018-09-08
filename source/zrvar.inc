@@ -46,7 +46,7 @@ end;
 procedure TZRVariable.Notify(Operation: TZROperation);
 begin
   if Assigned(Master) and not (csDestroying in Master.ComponentState) then
-    Master.Perform(ZR_NOTIFY, Integer(Operation), Integer(Self));
+    Master.Perform(ZR_NOTIFY, Integer(Operation), PtrInt(Self));
 end;
 
 procedure TZRVariable.SetMaster(Value : TZRCustomController);
