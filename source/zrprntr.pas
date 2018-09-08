@@ -492,19 +492,20 @@ var
   Buffer: array[0..1023] of Char;
   Break : Boolean;
   i     : Integer;
+  StartRow, EndRow: Integer;
 begin
   Break := True;
+  StartRow := 0;
+  EndRow := Strings.Count-1;
   if (TZRPage(Owner.Pages.Last) = Self) or (Owner.Options.PaperType = zptContinuous) then begin
-    i := Strings.Count-1;
-    while (i >= 0) and (Trim(Strings[i]) = '') do begin
-      Strings.Delete(i);
-      Dec(i);
+    while (EndRow >= 0) and (Trim(Strings[EndRow]) = '') do begin
+      Dec(EndRow);
       Break := False;
     end;
     if (Owner.Options.PaperType = zptContinuous) then
-      while (Strings.Count > 0) and (Trim(Strings[0]) = '') do Strings.Delete(0);
+      while (Strings.Count > 0) and (Trim(Strings[0]) = '') do Inc(StartRow);
   end;
-  for i:= 0 to Strings.Count-1 do Stream.WriteString(Strings[i]);
+  for i:= StartRow to EndRow do Stream.WriteString(Strings[i]);
   if Break then begin
     FillChar(Buffer, SizeOf(Buffer), 0);
     StrCopy(Buffer, PChar(Owner.EndOfPage(False)));
