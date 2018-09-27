@@ -4,6 +4,7 @@
     <PathDelim Value="\"/>
     <Name Value="zrptlaz"/>
     <Type Value="RunAndDesignTime"/>
+    <Author Value="Zaitsev Y.A. (ZYZ)"/>
     <CompilerOptions>
       <Version Value="11"/>
       <PathDelim Value="\"/>
@@ -16,6 +17,26 @@
         </Debugging>
       </Linking>
     </CompilerOptions>
+    <Description Value="ZReport - visual text report designer and generator, native VCL. Created to produce reports for matrix printers.
+
+Key features:
+*    produces text output with adjustable printer escapes;
+*    works through Windows print spooler;
+*    unlimited master-detail and even multi-dataset reports;
+*    fine pagination etc. 
+
+(src: torry.net)"/>
+    <License Value="Who gains money?
+====================
+Nobody. It is written as I needed it for internal usage.
+Just use it freely. You are encouraged to change the
+sources - just inform me in case I need you changes either.
+No responsibilities - do you think I`m responsible for
+the software you`ve got from Internet? 
+You`re welcome to inform me about the bugs.
+If you got spare money just send them to me (beer is 
+never enough) - I mean the library is DonationWare."/>
+    <Version Major="2" Release="11"/>
     <Files Count="14">
       <Item1>
         <Filename Value="zrconst.pas"/>
