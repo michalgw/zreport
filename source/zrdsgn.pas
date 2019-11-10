@@ -388,9 +388,11 @@ procedure TZRDesignForm.FillControllersList;
   end;
 begin
   with grControllers do begin
+    OnSelectCell := nil;
     RowCount  := 1;
     AddController(Report);
     FixedRows := 1;
+    OnSelectCell := @grControllersSelectCell;
   end;
 end;
 
@@ -587,7 +589,6 @@ begin
   try
     Band.Name := S;
     if Screen.ActiveForm = Self then begin
-      Designer.SelectOnlyThisComponent(nil);
       Designer.SelectOnlyThisComponent(Band);
     end;
   except
@@ -767,7 +768,6 @@ begin
   Band := TZRCustomBand(tvBands.Selected.Data);
   Band.HasController := True;
   Band := Band.SubController;
-  Designer.SelectOnlyThisComponent(nil);
   Designer.SelectOnlyThisComponent(Band);
 end;
 
@@ -777,13 +777,16 @@ begin
 end;
 
 procedure TZRDesignForm.acBandsDeleteExecute(Sender: TObject);
+var
+  ParentComp : TComponent;
 begin
   if MessageDlg(
        Format(szrDesignSureBandDelete,
               [TZRCustomBand(tvBands.Selected.Data).Name]),
        mtConfirmation, [mbYes, mbCancel], 0) in [mrOK, mrYes] then begin
+    ParentComp := TZRCustomBand(tvBands.Selected.Data).Parent;
     TZRCustomBand(tvBands.Selected.Data).Free;
-    Designer.SelectOnlyThisComponent(nil);
+    Designer.SelectOnlyThisComponent(ParentComp);
   end;
 end;
 
@@ -795,19 +798,21 @@ begin
   Controller := TZRCustomController(tvBands.Selected.Data);
   Group := Controller.CreateGroup;
   Designer.Modified;
-  Designer.SelectOnlyThisComponent(nil);
   Designer.SelectOnlyThisComponent(Group);
 end;
 
 procedure TZRDesignForm.acGroupsDeleteExecute(Sender: TObject);
+var
+  ParentComp : TComponent;
 begin
   if MessageDlg(
        Format(szrDesignSureGroupDelete,
               [TZRGroup(lbGroups.Items.Objects[lbGroups.ItemIndex]).Name]),
        mtConfirmation, [mbYes, mbCancel], 0) in [mrOK, mrYes] then begin
+    ParentComp := TZRGroup(lbGroups.Items.Objects[lbGroups.ItemIndex]).GetParentComponent;
     lbGroups.Items.Objects[lbGroups.ItemIndex].Free;
     Designer.Modified;
-    Designer.SelectOnlyThisComponent(nil);
+    Designer.SelectOnlyThisComponent(ParentComp);
   end;
 end;
 
@@ -840,7 +845,6 @@ begin
   if Sender = acVariablesExpression then Variable := Controller.CreateVariable(TZRExpression, 'Expression') else
   if Sender = acVariablesTotal      then Variable := Controller.CreateVariable(TZRAggregator, 'Total'     );
   Designer.Modified;
-  Designer.SelectOnlyThisComponent(nil);
   Designer.SelectOnlyThisComponent(Variable);
 end;
 
@@ -861,7 +865,6 @@ begin
       TObject(L[i]).Free;
   finally
     Designer.Modified;
-    Designer.SelectOnlyThisComponent(nil);
     FillVariablesList(TZRCustomController(grControllers.Objects[0, grControllers.Selection.Top]));
     L.Free;
   end;
@@ -988,7 +991,8 @@ begin
                     lbGroups.Items.Move(Index, Group.Order);
                   end;
     end;
-    lbGroups.ItemIndex := Group.Order;
+    if Message.Operation <> zopRemove then
+      lbGroups.ItemIndex := Group.Order;
     if ActiveControl = lbGroups then lbGroupsClick(lbGroups);
   end else
   if (Message.Sender is TZRVariable) then begin
@@ -1000,7 +1004,9 @@ begin
                   end;
       zopRename : begin
                     Index := ListBox.Items.IndexOfObject(Variable);
+                    ListBox.Sorted := False;
                     if Index >= 0 then ListBox.Items[Index] := Variable.Name;
+                    ListBox.Sorted := True;
                   end;
       zopRemove : begin
                     Index := ListBox.Items.IndexOfObject(Variable);
