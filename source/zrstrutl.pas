@@ -104,14 +104,14 @@ begin
     SrcPos:= 1;
     while SrcPos <= SrcLen do begin
       Start  := SrcPos;
-      while (Start <= SrcLen) and (Source[Start] = ' ') do Inc(Start);
+      while (Start <= SrcLen) and (CodePointCopy(Source, Start, 1) = ' ') do Inc(Start);
       Finish:= Min(Start + MaxCol - 1, SrcLen);
-      if (Finish < SrcLen) and (Source[Finish+1] <> ' ') then
-        while (Finish > Start) and (Source[Finish] <> ' ') do Dec(Finish);
+      if (Finish < SrcLen) and (CodePointCopy(Source, Finish+1, 1) <> ' ') then
+        while (Finish > Start) and (CodePointCopy(Source, Finish, 1) <> ' ') do Dec(Finish);
       if (Finish = Start) then
         Finish:= Min(Start + MaxCol - 1, SrcLen)
       else
-        while (Finish > Start) and (Source[Finish] = ' ') do Dec(Finish);
+        while (Finish > Start) and (CodePointCopy(Source, Finish, 1) = ' ') do Dec(Finish);
       Result:= Result + CodePointCopy(Source, Start, Finish - Start + 1) + #13#10;
       SrcPos:= Finish + 1;
     end;
