@@ -36,7 +36,7 @@ the software you`ve got from Internet?
 You`re welcome to inform me about the bugs.
 If you got spare money just send them to me (beer is 
 never enough) - I mean the library is DonationWare."/>
-    <Version Major="2" Release="11"/>
+    <Version Major="2" Release="12"/>
     <Files Count="14">
       <Item1>
         <Filename Value="zrconst.pas"/>

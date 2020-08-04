@@ -37,7 +37,7 @@ You`re welcome to inform me about the bugs.
 If you got spare money just send them to me (beer is 
 never enough) - I mean the library is DonationWare.
 "/>
-    <Version Major="2" Release="11"/>
+    <Version Major="2" Release="12"/>
     <Files Count="4">
       <Item1>
         <Filename Value="zrprprty.pas"/>
@@ -57,13 +57,16 @@ never enough) - I mean the library is DonationWare.
         <UnitName Value="ZRReg"/>
       </Item4>
     </Files>
-    <RequiredPkgs Count="2">
+    <RequiredPkgs Count="3">
       <Item1>
-        <PackageName Value="zrptlaz"/>
+        <PackageName Value="IDEIntf"/>
       </Item1>
       <Item2>
-        <PackageName Value="FCL"/>
+        <PackageName Value="zrptlaz"/>
       </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
     </RequiredPkgs>
     <UsageOptions>
       <UnitPath Value="$(PkgOutDir)"/>
